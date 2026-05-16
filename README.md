@@ -127,6 +127,10 @@ scene_name/
 2D LiDAR poses can be noisy and impact reconstruction quality. Use the following to clean and visualize the data:
 
 ```bash
+cd utils
+```
+
+```bash
 python analyze_pose_trajectory_with_gaps.py   --pose_dir path_to_data_folder/poses   --out_dir output_folder
 ```
 
