@@ -1,16 +1,16 @@
 # f1tenth-3DGS
 
-3D Reconstruction for F1Tenth from RGBD Sequence and 2D LiDAR
+3D Visual Sim for F1Tenth Vehicles from captured RGBD Sequence and 2D LiDAR poses
 
 Demo video/GIF: 
 
 ![](assets/moore_side_by_side_demo.gif)
 
-Rendered trajectory from F1Tenth scenes.
+Rendered trajectory from F1Tenth tracks.
 
 ## Overview
 
-3D reconstruction for F1Tenth-scale autonomous racing environments. Standard 3DGS relies on successful Structure-from-Motion initialization, but F1Tenth sequences are difficult for SfM because the vehicle motion is planar, the baseline is limited, and many views contain blur or weak texture.
+3D reconstruction for F1Tenth-scale autonomous racing environments. Standard 3DGS relies on successful Structure-from-Motion (SfM) initialization, but F1Tenth sequences are difficult for SfM because the vehicle motion is planar, the baseline is limited, and many views contain blur or weak texture.
 
 Instead, a practical RGBD reconstruction pipeline that synthesized RGB, depth, intrinsics, and vehicle poses for 3D Gaussian Splatting is proposed. Visual quality is enhanced with camera-gradient bundle-adjusted pose refinement.
 
