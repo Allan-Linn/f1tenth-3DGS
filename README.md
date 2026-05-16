@@ -62,7 +62,7 @@ In terminal 1, run:
 In terminal 2, run:
 
 ```bash
-ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/home/nvidia/f1tenth_ws/src/f1tenth_system/f1tenth_stack/config/f1tenth_online_async.yaml
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=path/to/f1tenth_ws/src/f1tenth_system/f1tenth_stack/config/f1tenth_online_async.yaml
 ```
 
 In terminal 3, run Foxglove to visualize the map:
@@ -90,6 +90,8 @@ In terminal 3, run:
 ```bash
 ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765
 ```
+
+Publish the vehicle's initial 2D position on the map with the Foxglove interface.
 
 In terminal 4, run:
 
