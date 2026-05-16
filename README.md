@@ -1,6 +1,6 @@
 # f1tenth-3DGS
 
-3D Visual Sim for F1Tenth Vehicles from captured RGBD Sequence and 2D LiDAR poses
+3DGS Visual Simulator for F1Tenth Vehicles from captured RGBD Sequence and 2D LiDAR poses
 
 Demo video/GIF: 
 
