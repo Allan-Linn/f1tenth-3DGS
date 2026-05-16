@@ -12,7 +12,7 @@ Rendered trajectory from F1Tenth scenes.
 
 3D reconstruction for F1Tenth-scale autonomous racing environments. Standard 3DGS relies on successful Structure-from-Motion initialization, but F1Tenth sequences are difficult for SfM because the vehicle motion is planar, the baseline is limited, and many views contain blur or weak texture.
 
-Instead, a practical RGBD reconstruction pipeline that synthesized RGB, depth, intrinsics, and vehicle poses for 3D Gaussian Splatting is proposed. Visual quality is then enhanced with camera-gradient bundle-adjusted pose refinement.
+Instead, a practical RGBD reconstruction pipeline that synthesized RGB, depth, intrinsics, and vehicle poses for 3D Gaussian Splatting is proposed. Visual quality is enhanced with camera-gradient bundle-adjusted pose refinement.
 
 ## Main Contributions
 
@@ -44,9 +44,9 @@ conda activate gaussian_splatting_camgrad
 
 This pipeline builds on top of the SLAM & Particle Filter modules established in the F1tenth stack. 
 
-See installation guide for F1tenth here: 
+Follow the installation guide for F1tenth here: 
 
-Afterwards, on the F1tenth vehicle, Run SLAM and save the map of the environment:
+Once complete, perform SLAM and save the map of the environment on the f1Tenth vehicle by running simultaneously:
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -71,7 +71,7 @@ In terminal 3, run Foxglove to visualize the map:
 ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765
 ```
 
-After the map has been saved, load it for particle filter and run the following:
+After the map has been saved, load it for particle filter and run the following simultaneously:
 
 In terminal 1, run:
 
@@ -98,6 +98,8 @@ python record_rgbd_pose_filtered.py \
   --output_dir path_to_output_folder \
   --max_step_m 5.0
 ```
+
+Then drive the car around the environment. Use a lower speed to reduce blurry frames.
 
 The captured scene has the format:
 
