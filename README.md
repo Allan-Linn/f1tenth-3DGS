@@ -4,7 +4,7 @@
 
 Demo video/GIF: 
 
-![](assets/moore_demo.gif)
+![](assets/moore_demo1.gif)
 
 Rendered trajectory from F1Tenth tracks.
 
