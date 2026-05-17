@@ -4,7 +4,7 @@
 
 Demo video/GIF: 
 
-![](assets/moore_side_by_side_demo.gif)
+![](assets/moore_demo.gif)
 
 Rendered trajectory from F1Tenth tracks.
 
@@ -118,8 +118,8 @@ scene_name/
     1.png
     ...
   poses/
-    0.png
-    1.png
+    0.txt
+    1.txt
     ...
   intrinsics.json
 ```
@@ -130,9 +130,7 @@ scene_name/
 
 ```bash
 cd utils
-```
 
-```bash
 python analyze_pose_trajectory_with_gaps.py   --pose_dir path_to_data_folder/poses   --out_dir output_folder
 ```
 
