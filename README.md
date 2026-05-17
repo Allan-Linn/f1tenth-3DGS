@@ -71,7 +71,7 @@ In terminal 3, run Foxglove to visualize the map:
 ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765
 ```
 
-![](assets/moore_map.pgm)
+![](assets/moore_map.png)
 
 After the map has been saved, load it for particle filter and run the following:
 
