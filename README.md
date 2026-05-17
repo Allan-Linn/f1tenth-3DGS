@@ -1,6 +1,6 @@
 # f1tenth-3DGS
 
-3DGS Visual Simulator for F1Tenth Vehicles from captured RGBD Sequence and 2D LiDAR poses
+3DGS Visual Simulator for F1Tenth Vehicles from captured RGBD Sequence and 2D LiDAR poses.
 
 Demo video/GIF: 
 
@@ -10,9 +10,9 @@ Rendered trajectory from F1Tenth tracks.
 
 ## Overview
 
-3D reconstruction for F1Tenth-scale autonomous racing environments. Standard 3DGS relies on successful Structure-from-Motion (SfM) initialization, but F1Tenth sequences are difficult for SfM because the vehicle motion is planar, the baseline is limited, and many views contain blur or weak texture.
+3D reconstruction for F1Tenth autonomous racing environments. Standard 3DGS relies on successful Structure-from-Motion (SfM) initialization, but F1Tenth sequences are difficult for SfM because the vehicle motion is planar, the baseline is limited, and many views contain blur or weak texture.
 
-Instead, a practical RGBD reconstruction pipeline that synthesized RGB, depth, intrinsics, and vehicle poses for 3D Gaussian Splatting is proposed. Visual quality is enhanced with camera-gradient bundle-adjusted pose refinement.
+Instead, a practical RGBD reconstruction pipeline that synthesizes RGB, depth, intrinsics, and vehicle poses for 3D Gaussian Splatting is proposed. Visual quality is enhanced with camera-gradient bundle-adjusted pose refinement.
 
 ## Main Contributions
 
@@ -44,7 +44,7 @@ conda activate gaussian_splatting_camgrad
 
 This pipeline builds on top of the SLAM & Particle Filter modules established in the F1tenth stack. 
 
-Follow the installation guide for F1tenth here: 
+Follow the installation guide for F1tenth/RoboRacer [here](https://f1tenth-coursekit.readthedocs.io/en/latest/lectures/ModuleC/tutorial5.html): 
 
 Once complete, perform SLAM and save the map of the environment on the f1Tenth vehicle by running simultaneously:
 
@@ -71,7 +71,9 @@ In terminal 3, run Foxglove to visualize the map:
 ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765
 ```
 
-After the map has been saved, load it for particle filter and run the following simultaneously:
+![](assets/moore_map.pgm)
+
+After the map has been saved, load it for particle filter and run the following:
 
 In terminal 1, run:
 
