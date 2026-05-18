@@ -46,7 +46,7 @@ conda activate gaussian_splatting_camgrad
 
 ## Data Collection
 
-This pipeline builds on top of the SLAM & Particle Filter modules established in the F1tenth stack. 
+This pipeline builds on top of the [SLAM](https://f1tenth-coursekit.readthedocs.io/en/latest/lectures/ModuleC/tutorial5.html) & [Particle Filter](https://f1tenth-coursekit.readthedocs.io/en/latest/lectures/ModuleC/lecture08.html) modules established in the F1tenth stack. 
 
 Follow the installation guide for F1tenth/RoboRacer [here](https://f1tenth-coursekit.readthedocs.io/en/latest/lectures/ModuleC/tutorial5.html): 
 
@@ -228,6 +228,18 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
 
 ## Inference on the F1Tenth Vehicle
 
+While planning with particle filter, run:
+
+```bash
+python inference.py \
+  --model_path /path/to/model \
+  --source_path /path/to/data/scene \
+  --parent_frame map \
+  --child_frame laser \
+  --continuous \
+  --rate_hz 2 \
+  --out_dir /outputs/live_tf_renders
+```
 
 
 
