@@ -241,8 +241,29 @@ python inference.py \
   --out_dir /outputs/live_tf_renders
 ```
 
+## Future Work
 
+The current goal is to further improve reconstruction quality before deploying the system into the F1Tenth stack. While the pipeline can already generate a usable Gaussian scene from RGB-D captures and 2D LiDAR poses, improving sharpness, reducing blur, and increasing pose consistency remain important next steps.
 
+The next step is to deploy the reconstructed Gaussian scene inside the F1Tenth stack as a vision-based simulator. Given a 2D LiDAR-based vehicle pose from the particle filter or SLAM localization, the system can convert the vehicle pose into a camera transform and render the corresponding onboard RGB observation from the trained 3DGS scene.
+
+This would allow the reconstructed track to act as a lightweight visual simulation environment for camera-based policy learning, perception testing, and sim-to-real experiments. 
+
+![](assets/gs_sim.png)
+
+```text
+2D LiDAR / particle-filter pose
+        ↓
+vehicle-to-camera transform
+        ↓
+3DGS renderer
+        ↓
+vision-based policy or perception module
+```
+
+##Acknowledgement
+
+Thank you to the F1Tenth community for providing the hardware platform, vehicle setup resources, and supporting documentation that made this work possible.
 
 
 
