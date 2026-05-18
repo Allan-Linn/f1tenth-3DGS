@@ -6,17 +6,21 @@ Demo video/GIF:
 
 ![](assets/moore_demo1.gif)
 
+![](assets/levine_demo.gif)
+
 Rendered trajectory from F1Tenth tracks.
 
 ## Overview
 
 3D reconstruction for F1Tenth autonomous racing environments. Standard 3DGS relies on successful Structure-from-Motion (SfM) initialization, but F1Tenth sequences are difficult for SfM because the vehicle motion is planar, the baseline is limited, and many views contain blur or weak texture.
 
-Instead, a practical RGBD reconstruction pipeline that synthesizes RGB, depth, intrinsics, and vehicle poses for 3D Gaussian Splatting is proposed. Visual quality is enhanced with camera-gradient bundle-adjusted pose refinement.
+Instead, a practical RGB-D reconstruction pipeline that synthesizes RGB, depth, camera intrinsics, and vehicle poses into a 3D Gaussian Splatting training setup is proposed. Visual quality is further improved through camera-gradient bundle-adjusted pose refinement.
+
+The recovered Gaussian scene can then be used as a vision-based simulator by rendering onboard RGB observations from vehicle poses, moving the F1Tenth stack toward camera-based simulation and policy training.
 
 ## Main Contributions
 
-1. **RGBD to 3DGS conversion pipeline**  
+1. **RGBD to 3DGS pipeline**  
    Converted F1Tenth RGBD captures into a dataset viable for 3D Gaussian Splatting.
 
 2. **Successful Reconstruction of Indoor Scenes**  
@@ -221,6 +225,8 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
   --pose_ba_inner_log_every 50 \
   --pose_log_interval 500
 ```
+
+## Inference on the F1Tenth Vehicle
 
 
 
