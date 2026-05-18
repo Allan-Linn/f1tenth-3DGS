@@ -18,6 +18,8 @@ Instead, a practical RGB-D reconstruction pipeline that synthesizes RGB, depth, 
 
 The recovered Gaussian scene can then be used as a vision-based simulator by rendering onboard RGB observations from vehicle poses, moving the F1Tenth stack toward camera-based simulation and policy training.
 
+![](assets/gs_sim.png)
+
 ## Main Contributions
 
 1. **RGBD to 3DGS pipeline**  
@@ -239,26 +241,6 @@ python inference.py \
   --continuous \
   --rate_hz 2 \
   --out_dir /outputs/live_tf_renders
-```
-
-## Future Work
-
-While the pipeline can already generate a usable Gaussian scene from RGB-D captures and 2D LiDAR poses, improving sharpness, reducing blur, and increasing pose consistency remain important next steps.
-
-The goal is to deploy the pipeline inside the F1Tenth stack as a vision-based simulator. Given a 2D LiDAR-based vehicle pose from the particle filter or SLAM localization, the system can convert the vehicle pose into a camera transform and render the corresponding onboard RGB observation from the trained 3DGS scene.
-
-This would allow the reconstructed track to act as a lightweight visual simulation environment for camera-based policy learning, perception testing, and sim-to-real experiments. 
-
-![](assets/gs_sim.png)
-
-```text
-2D LiDAR / particle-filter pose
-        ↓
-vehicle-to-camera transform
-        ↓
-3DGS renderer
-        ↓
-vision-based policy or perception module
 ```
 
 ## Acknowledgement
