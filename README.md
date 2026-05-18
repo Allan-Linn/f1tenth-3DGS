@@ -28,14 +28,17 @@ The recovered Gaussian scene can then be used as a vision-based simulator by ren
 2. **Successful Reconstruction of Indoor Scenes**  
     Trained 3D models that can be deployed on the F1tenth vehicle, enabling novel view inference in 0.1s.
 
-3. **Edge-aware RGBD Gaussian initialization**  
-   Sampled RGBD points with emphasis on image edges and high-detail regions.
+<!-- 3. **Edge-aware RGBD Gaussian initialization**  
+   Sampled RGBD points with emphasis on image edges and high-detail regions. -->
 
-4. **Selective Gaussian Insertion**  
+3. **Selective Gaussian Insertion**  
    Evaluated residual/detail-aware Gaussian insertion instead of naively increasing scene size.
 
-5. **Temporal-window Camera-gradient Bundle Adjustment**  
+4. **Temporal-window Camera-gradient Bundle Adjustment**  
    Implemented a constrained local-window pose refinement strategy that optimized neighboring camera poses together rather than optimizing each frame independently.
+
+5. **Integration with the F1Tenth stack**  
+    Integrated with the F1Tenth stack to generate live RGB renders from localization poses for vision-based simulation and RL.
 
 
 ## Setup
