@@ -17,10 +17,10 @@ Instead, a practical RGBD reconstruction pipeline that synthesizes RGB, depth, i
 ## Main Contributions
 
 1. **RGBD to 3DGS conversion pipeline**  
-   Converted F1Tenth RGBD captures into a dataset for 3D Gaussian Splatting.
+   Converted F1Tenth RGBD captures into a dataset viable for 3D Gaussian Splatting.
 
 2. **Successful Reconstruction of Indoor Scenes**  
-    Trained 3D scene models that can be deployed on the F1tenth vehicle, enabling inference in 0.1s.
+    Trained 3D models that can be deployed on the F1tenth vehicle, enabling novel view inference in 0.1s.
 
 3. **Edge-aware RGBD Gaussian initialization**  
    Sampled RGBD points with emphasis on image edges and high-detail regions.
